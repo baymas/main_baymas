@@ -1,0 +1,78 @@
+\documentclass{ctexart}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[textwidth=14.5cm]{geometry}
+\usepackage{blindtext}
+\parindent=0pt
+
+\bibliographystyle{plain}
+\title{Homework Three}
+
+
+\author{颜铂林 \\ 数学与应用数学 3210101536}
+
+\begin{document}
+\begin{sloppypar}
+
+\maketitle
+
+
+导言：这是一篇关于我的Linux工作环境的说明文。
+
+\section*{Linux发行版本与版号}
+
+打开terminal，输入以下命令\verb!sudo lsb_release -a!,返回：
+
+\begin{verbatim}
+
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.6 LTS
+Release:	18.04
+Codename:	bionic
+
+\end{verbatim}
+
+得到发行版本是Ubuntu 18.04.6 LTS，版本号是18.04。
+
+\section*{环境配置}
+
+\textbf{Step1:}打开Software\&Updates，在Download from一栏选择了Other，然后挑选\textbf{mirrors.cn99.com}作为下载源。打开shell，输入\verb|sudo apt-get install synaptics|安装\textbf{synaptics} 。
+
+\textbf{Step2:}打开synaptics，安装\textbf{fcitx}和\textbf{fcitx-googlepinyin}，在language support中将输入法更换为fcitx，并且添加googlepinyin。
+
+\textbf{Step3:}打开synaptics，安装\textbf{g++, gcc, make, cmake, automake, emacs, vim, gedit, texlivefull, doxygen, doxygen.doc, doxymacs, libboost-all-dev, trilinos-all-dev ,trilions-dbg, trilions.doc, dx, git, ssh, vnc4server, x11vnc}
+
+\textbf{Step4:}打开shell，输入\verb|emacs .bashrc|进入emacs的配置文件，在其中添加\verb|alias emacs='LC.CTYPE=zh_CN.utf8 emacs'|,使得在emacs中可以输入中文。
+
+\section*{未来规划}
+
+\textbf{PART1}
+
+预计将会在之后的数据结构，数值分析等课程里面继续使用Linux环境。并且在今后编写数学文章时会在Linux中借助emacs编辑latex文档。
+
+\textbf{PART2}
+
+我认为当前环境不太符合未来需求。由于这是一台刚配置好不超过三天的虚拟机，其中许多功能还未完善。
+
+1.缺少工作系统中的代码管理，以及文献管理，需要熟练使用git以长期稳定保存代码，创建云盘以实时备份文件。
+
+2.emacs编辑器缺少适合自己习惯的专属配置，这一点将在今后使用过程中逐步完善解决。目前借鉴老师和助教的配置方案来暂时满足工作条件。
+
+3.缺少一些脚本文件来辅助提高工作效率，将在之后按照自己的需求逐渐增加。
+
+\section*{工作结果管理}
+
+在阅读了\textbf{Github: An Introduction}\cite{2016Github}以及\textbf{Social coding in GitHub: transparency and collaboration in an open software repository}\cite{2012Social}之后，我了解到了使用github管理代码的优越之处，并且注册了github帐号，配置好了git环境用来管理我的代码。
+
+而在老师的推荐下，决定使用坚果云来实时保存工作中的重要文件和工作结果。
+
+
+\bibliography{books}
+
+
+
+
+\end{sloppypar}
+\end{document}

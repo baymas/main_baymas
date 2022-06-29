@@ -1,0 +1,26 @@
+\documentclass{ctexart}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title{Homework Two}
+
+
+\author{ \\ 作者专业和学号}
+
+\begin{document}
+
+\maketitle
+
+
+这是一个来自...领域的问题...
+\section{问题描述}
+问题叙述如下: 令...
+
+\section{证明}
+
+
+
+
+
+\end{document}

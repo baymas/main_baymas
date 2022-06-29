@@ -1,0 +1,37 @@
+\documentclass{ctexart}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title{Homework One}
+
+\author{颜铂林 \\ 数学与应用数学\quad 3210101536}
+    
+\begin{document}
+
+\maketitle
+导言：多项试是一类比较简单的函数，在理论上，如果能用多项式近似的代替某些复杂的函数去研究他们的某些性态，无疑会带来很大的方便。而在实际计算中，由于多项式只涉及加，减，乘三种运算，且人们已设计出不少针对多项式的高效快速运算方法，因此用多项式作为复杂函数的近似去参与运算将有效的节省运算量。因此就有了Taylor定理的提出与应用。
+\section{问题描述}
+        （带pean余项的Taylor公式）\par
+        设 f(x)在$x_{0}$处有n阶导数，则存在$x_{0}$的一个邻域，对于该邻域内的任意一点x，成立：\par
+
+        \begin{equation}
+          f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})^2+\cdots+\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^n+r_{n}(x)\label{(1)}
+        \end{equation}  \par
+        其中余项$r_{n}(x)$满足：\begin{equation}
+                                r_{n}(x)=o((x-x_{0})^n)\label{(2)}
+                               \end{equation}
+ \section{证明}
+ 证： 考虑$r_{n}(x)=f(x)-\sum\limits_{k=0}^n\frac{1}{k!}f^{(k)}(x_{0})(x-x_{0})^k$,只要证明$r_{n}(x)=o((x-x_{0})^n)$即可。\par
+ 显然：$r_{n}(x_{0})=r'_{n}(x_{0})=\dots=r^{(n-1)}(x_{0})=0$\par
+ 反复应用L'Hospital法则:\par
+$\lim\limits_{x \rightarrow x_{0}}\frac{r_{n}(x)}{(x-x_{0})^n}=\lim\limits_{x \rightarrow x_{0}}\frac{r'_{n}(x)}{n(x-x_{0})^{n-1}}=\lim\limits_{x \rightarrow x_{0}}\frac{r''_{n}(x)}{n(n-1)(x-x_{0})^{n-2}}=\dots=\lim\limits_{x \rightarrow x_{0}}\frac{r^{(n-1)}_{n}(x)}{n(n-1)\dots2(x-x_{0})}=\frac{1}{n!}\lim\limits_{x \rightarrow x_{0}}[\frac{f^{(n-1)}(x)-f^{(n-1)}(x_{0})-f^{(n)}(x_{0})(x-x_{0})}{x-x_{0}}]=\frac{1}{n!}\lim\limits_{x \rightarrow x_{0}}[\frac{f^{(n-1)}(x)-f^{(n-1)}(x_{0})}{x-x_{0}}-f^{(n)}(x_{0})]=\frac{1}{n!}[f^{(n)}(x_{0})-f^{(n)}(x_{0})]=0$\par
+ 因此
+ $${r_{n}(x)=o((x-x_{0})^n)}$$
+ \rightline{  \eqref{(2)}}
+ 则\eqref{(1)}得证！
+ 
+
+
+\end{document}
+
